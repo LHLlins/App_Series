@@ -7,21 +7,21 @@ from sqlalchemy import select, delete
 class RepositorioSerie():
 
     def __init__(self, db: Session):
-        self.db = db
+        self.db = db 
     
-    def criar(self, serie: schemas.Serie):
-        db_serie = models.Serie(titulo=serie.titulo,
-                                ano=serie.ano,
-                                genero=serie.genero,
-                                qtd_temporada=serie.qtd_temporada)
-        self.db.add(db_serie)
-        self.db.commit()
-        self.db.refresh(db_serie)
-        # self.db.close()
+    def criar(self, serie: schemas.Serie): 
+        db_serie = models.Serie(titulo=serie.titulo, 
+                                ano=serie.ano, 
+                                genero=serie.genero, 
+                                qtd_temporada=serie.qtd_temporada) 
+        self.db.add(db_serie) 
+        self.db.commit() 
+        self.db.refresh(db_serie) 
+        # self.db.close() 
     
 
-    def listar(self):
-        series = self.db.query(models.Serie).all()
+    def listar(self): 
+        series = self.db.query(models.Serie).all() 
         return series
    
 
