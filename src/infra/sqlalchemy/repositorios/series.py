@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from infra.sqlalchemy.models import models
-from schemas import schemas
+from src.infra.sqlalchemy.models import models
+from . import schemas
 from sqlalchemy import select, delete
 
 

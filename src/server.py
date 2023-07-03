@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends
-from infra.sqlalchemy.config.database import criar_db, get_db
-from schemas import schemas
+from src.infra.sqlalchemy.config.database import criar_db, get_db
+from . import schemas
 from sqlalchemy.orm import Session
-from infra.sqlalchemy.repositorios.series import RepositorioSerie
+from src.infra.sqlalchemy.repositorios.series import RepositorioSerie
 
 
 
